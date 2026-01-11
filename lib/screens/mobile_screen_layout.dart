@@ -1,4 +1,5 @@
 import 'package:chatter/colors.dart';
+import 'package:chatter/widgets/contacts_list.dart';
 import 'package:flutter/material.dart';
 
 class MobileScreenLayout extends StatelessWidget {
@@ -10,6 +11,8 @@ class MobileScreenLayout extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: appBarColor,
+          surfaceTintColor: appBarColor,
           title: Text(
             'Chatter',
             style: TextStyle(
@@ -42,6 +45,7 @@ class MobileScreenLayout extends StatelessWidget {
             ],
           ),
         ),
+        body: ContactsList(),
       ),
     );
   }
