@@ -42,7 +42,7 @@ const info = [
     'message': 'Hello, I want to sleep.',
     'time': '1:03 pm',
     'profilePic':
-        'https://media.cntraveler.com/photos/60596b398f4452dac88c59f8/16:9/w_3999,h_2249,c_limit/MtFuji-GettyImages-959111140.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Mia_Khalifa_in_2019_%28Enhanced%29.jpg/500px-Mia_Khalifa_in_2019_%28Enhanced%29.jpg',
   },
   {
     'name': 'Dad',

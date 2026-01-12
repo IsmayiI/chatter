@@ -1,5 +1,6 @@
 import 'package:chatter/widgets/contacts_list.dart';
-import 'package:chatter/widgets/web/profile_bar.dart';
+import 'package:chatter/widgets/web/web_profile_bar.dart';
+import 'package:chatter/widgets/web/web_search_bar.dart';
 import 'package:flutter/material.dart';
 
 class WebScreenLayout extends StatelessWidget {
@@ -14,8 +15,8 @@ class WebScreenLayout extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                ProfileBar(),
-                // SEARCH
+                WebProfileBar(),
+                WebSearchBar(),
                 Expanded(child: ContactsList()),
               ],
             ),
