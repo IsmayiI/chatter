@@ -1,4 +1,3 @@
-import 'package:chatter/colors.dart';
 import 'package:chatter/info.dart';
 import 'package:flutter/material.dart';
 
@@ -32,10 +31,8 @@ class ContactsList extends StatelessWidget {
         );
       },
       separatorBuilder: (BuildContext context, int index) {
-        return const Divider(color: dividerColor, height: 8);
+        return const SizedBox(height: 8);
       },
     );
   }
 }
-
-// padding: const EdgeInsets.only(bottom: 8.0),
