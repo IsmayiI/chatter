@@ -22,6 +22,23 @@ class Info {
 
 final infoList = info.map((e) => Info.fromMap(e)).toList();
 
+class Message {
+  String text;
+  String time;
+  bool isMe;
+  Message({required this.text, required this.time, required this.isMe});
+
+  factory Message.fromMap(Map<String, dynamic> map) {
+    return Message(
+      text: map['text'] as String,
+      time: map['time'] as String,
+      isMe: map['isMe'] as bool,
+    );
+  }
+}
+
+final messageList = messages.map((e) => Message.fromMap(e)).toList();
+
 const info = [
   {
     'name': 'Elon Musk',

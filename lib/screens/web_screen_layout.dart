@@ -1,3 +1,4 @@
+import 'package:chatter/widgets/chat_list.dart';
 import 'package:chatter/widgets/contacts_list.dart';
 import 'package:chatter/widgets/web/web_chat_app_bar.dart';
 import 'package:chatter/widgets/web/web_profile_bar.dart';
@@ -42,7 +43,7 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 WebChatAppBar(),
-                // CHAT LIST
+                Expanded(child: ChatList()),
                 // FOOTER
               ],
             ),
