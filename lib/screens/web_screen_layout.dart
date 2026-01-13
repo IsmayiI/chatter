@@ -1,4 +1,5 @@
 import 'package:chatter/widgets/contacts_list.dart';
+import 'package:chatter/widgets/web/web_chat_app_bar.dart';
 import 'package:chatter/widgets/web/web_profile_bar.dart';
 import 'package:chatter/widgets/web/web_search_bar.dart';
 import 'package:flutter/material.dart';
@@ -13,11 +14,19 @@ class WebScreenLayout extends StatelessWidget {
         children: [
           // LEFT SIDEBAR
           Expanded(
-            child: Column(
+            child: Row(
               children: [
-                WebProfileBar(),
-                WebSearchBar(),
-                Expanded(child: ContactsList()),
+                Expanded(
+                  child: Column(
+                    children: [
+                      WebProfileBar(),
+                      WebSearchBar(),
+                      Expanded(child: ContactsList()),
+                    ],
+                  ),
+                ),
+                // DIVIDER
+                Container(color: Colors.grey, width: 0.3),
               ],
             ),
           ),
@@ -29,6 +38,13 @@ class WebScreenLayout extends StatelessWidget {
                 image: AssetImage('assets/backgroundImage.png'),
                 fit: BoxFit.cover,
               ),
+            ),
+            child: Column(
+              children: [
+                WebChatAppBar(),
+                // CHAT LIST
+                // FOOTER
+              ],
             ),
           ),
         ],
