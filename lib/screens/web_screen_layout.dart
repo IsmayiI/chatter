@@ -1,6 +1,8 @@
+import 'package:chatter/colors.dart';
 import 'package:chatter/widgets/chat_list.dart';
 import 'package:chatter/widgets/contacts_list.dart';
 import 'package:chatter/widgets/web/web_chat_app_bar.dart';
+import 'package:chatter/widgets/web/web_chat_input_message.dart';
 import 'package:chatter/widgets/web/web_profile_bar.dart';
 import 'package:chatter/widgets/web/web_search_bar.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +46,7 @@ class WebScreenLayout extends StatelessWidget {
               children: [
                 WebChatAppBar(),
                 Expanded(child: ChatList()),
-                // FOOTER
+                WebChatInputMessage(),
               ],
             ),
           ),
