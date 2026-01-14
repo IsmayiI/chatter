@@ -13,14 +13,12 @@ class MessageCard extends StatelessWidget {
         ? Alignment.centerRight
         : Alignment.centerLeft;
 
-    final paddingMessage = message.isMe
-        ? const EdgeInsets.only(left: 50)
-        : const EdgeInsets.only(right: 50);
-
-    return Padding(
-      padding: paddingMessage,
-      child: Align(
-        alignment: aligment,
+    return Align(
+      alignment: aligment,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width - 45,
+        ),
         child: Card(
           elevation: 1,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
