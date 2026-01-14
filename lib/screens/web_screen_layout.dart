@@ -1,4 +1,3 @@
-import 'package:chatter/colors.dart';
 import 'package:chatter/widgets/chat_list.dart';
 import 'package:chatter/widgets/contacts_list.dart';
 import 'package:chatter/widgets/web/web_chat_app_bar.dart';

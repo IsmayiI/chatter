@@ -11,9 +11,6 @@ class ChatList extends StatelessWidget {
       itemCount: messageList.length,
       itemBuilder: (context, index) {
         final message = messageList[index];
-        if (message.isMe == true) {
-          return MessageCard(message: message);
-        }
         return MessageCard(message: message);
       },
     );

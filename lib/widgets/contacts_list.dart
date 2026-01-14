@@ -1,4 +1,5 @@
 import 'package:chatter/info.dart';
+import 'package:chatter/screens/mobile_chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class ContactsList extends StatelessWidget {
@@ -12,7 +13,13 @@ class ContactsList extends StatelessWidget {
       itemBuilder: (context, index) {
         final info = infoList[index];
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            if (MediaQuery.of(context).size.width <= 900) {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => MobileChatScreen()),
+              );
+            }
+          },
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(info.profilePic),

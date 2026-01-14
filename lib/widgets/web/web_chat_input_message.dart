@@ -11,7 +11,7 @@ class WebChatInputMessage extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       decoration: const BoxDecoration(
         border: Border(bottom: BorderSide(color: dividerColor)),
-        color: chatBarMessage,
+        color: backgroundColor,
       ),
       child: Row(
         children: [

@@ -13,40 +13,50 @@ class MessageCard extends StatelessWidget {
         ? Alignment.centerRight
         : Alignment.centerLeft;
 
-    return Align(
-      alignment: aligment,
-      child: Card(
-        elevation: 1,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        color: messageColor,
-        margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-        child: Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 10,
-                right: 90,
-                top: 5,
-                bottom: 12,
-              ),
-              child: Text(message.text, style: const TextStyle(fontSize: 16)),
-            ),
+    final paddingMessage = message.isMe
+        ? const EdgeInsets.only(left: 50)
+        : const EdgeInsets.only(right: 50);
 
-            Positioned(
-              bottom: 5,
-              right: 5,
-              child: Row(
-                children: [
-                  Text(
-                    message.time,
-                    style: const TextStyle(fontSize: 13, color: Colors.white60),
-                  ),
-                  const SizedBox(width: 5),
-                  const Icon(Icons.done_all, size: 20, color: Colors.white60),
-                ],
+    return Padding(
+      padding: paddingMessage,
+      child: Align(
+        alignment: aligment,
+        child: Card(
+          elevation: 1,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          color: messageColor,
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 10,
+                  right: 90,
+                  top: 5,
+                  bottom: 12,
+                ),
+                child: Text(message.text, style: const TextStyle(fontSize: 16)),
               ),
-            ),
-          ],
+
+              Positioned(
+                bottom: 5,
+                right: 5,
+                child: Row(
+                  children: [
+                    Text(
+                      message.time,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: Colors.white60,
+                      ),
+                    ),
+                    const SizedBox(width: 5),
+                    const Icon(Icons.done_all, size: 20, color: Colors.white60),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
