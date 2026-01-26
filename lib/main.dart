@@ -1,6 +1,6 @@
 import 'package:chatter/colors.dart';
-import 'package:chatter/features/landing/screens/landing_screen.dart';
 import 'package:chatter/firebase_options.dart';
+import 'package:chatter/routes/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +15,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Chatter',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
+        appBarTheme: const AppBarTheme(backgroundColor: appBarColor),
       ),
-      home: LandingScreen(),
+      routerConfig: goRouter(),
     );
   }
 }
